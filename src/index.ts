@@ -15,7 +15,7 @@ const searchQuery$ = fromEvent(searchInput, "keyup").pipe(
 
 searchQuery$
   .pipe(
-    debounceTime(400),
+    debounceTime(500),
     distinctUntilChanged(),
     switchMap((searchValue) => {
       return users$.pipe(

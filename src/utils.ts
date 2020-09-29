@@ -3,7 +3,6 @@ import { ajax } from "rxjs/ajax";
 
 export const getUsers = (): Observable<any> => {
   const url = "https://reqres.in/api/users";
-  // return getObservableFromFetch(url);
   return ajax.getJSON(url, {
     'Cache-Control': 'no-cache'
   });
